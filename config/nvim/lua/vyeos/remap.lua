@@ -1,7 +1,13 @@
 local M = {}
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<C-n>", vim.cmd.Ex)
+
+local map = vim.keymap.set
+map("n", "<C-n>", vim.cmd.Ex)
+map("n", "<leader>t", "<cmd>tabnew<CR>", { desc = "New Tab" })
+map("n", "<Tab>", "gt", { desc = "Next Tab" })
+map("n", "<S-Tab>", "gT", { desc = "Previous Tab" })
+map("n", "<C-c>", "<cmd> %y+ <CR>", { desc = "Copy whole file" })
 
 M.general = {
 	i = {},
@@ -11,14 +17,10 @@ M.general = {
 		["<C-d>"] = { "<C-d>zz" },
 		["n"] = { "nzzzv" },
 		["N"] = { "Nzzzv" },
-		["=ap"] = { "map=ap'a" },
-		-- Copy all
-		["<C-c>"] = { "<cmd> %y+ <CR>", "Copy whole file" },
+		["=ap"] = { "ma=ap'a" },
 	},
 	v = {},
-	x = {
-		["<C-n>"] = { "<cmd> Ex <CR>" },
-	},
+	x = {},
 }
 
 return M
