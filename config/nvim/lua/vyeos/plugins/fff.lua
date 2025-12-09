@@ -22,12 +22,12 @@ return {
 			end,
 			desc = "FFFind files",
 		},
-		{
-			"<leader>fg",
-			function()
-				require("fff").find_in_git_root()
-			end,
-			desc = "Find git files",
-		},
+		-- {
+		-- 	"<leader>fg",
+		-- 	function()
+		-- 		require("fff").find_in_git_root()
+		-- 	end,
+		-- 	desc = "Find git files",
+		-- },
 	},
 }

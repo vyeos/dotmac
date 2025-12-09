@@ -13,6 +13,7 @@ return {
 		vim.keymap.set("n", "<leader>fw", builtin.live_grep, { desc = "Live grep" })
 		vim.keymap.set("n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>")
 		vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
+		vim.keymap.set("n", "<leader>fg", builtin.git_files, { desc = "Git Files" })
 
 		--   vim.keymap.set("n", "<leader>th", function()
 		--     local theme = require("telescope.themes").get_dropdown({
