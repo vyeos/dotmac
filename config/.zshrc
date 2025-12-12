@@ -27,6 +27,7 @@ alias ghconf="nvim ~/.config/ghostty/config"
 alias lg='lazygit'
 alias gor="go run ."
 alias shadcn="pnpm dlx shadcn@latest"
+alias v="nvim"
 
 # Fixed path handling for Google Drive (Using quotes is safer than escaping spaces)
 alias cdgd="cd '/Users/rudra/Library/CloudStorage/GoogleDrive-rudranpatel0980@gmail.com/My Drive'"
@@ -42,12 +43,10 @@ if command -v fzf &> /dev/null; then
 fi
 
 # 9. RUNTIMES (BUN & PNPM)
-# Bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
-# PNPM
 export PNPM_HOME="/Users/rudra/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;

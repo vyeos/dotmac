@@ -4,7 +4,7 @@ DOTFILES="$HOME/personal/dotmac/config"
 
 mkdir -p "$HOME/.config"
 
-configs=(nvim lazygit git ghostty borders)
+configs=(nvim lazygit git ghostty tmux)
 
 for config in "${configs[@]}"; do
   rm -rf "$HOME/.config/$config"
@@ -15,6 +15,8 @@ for config in "${configs[@]}"; do
     ln -s "$DOTFILES/$config" "$HOME/.config/$config"
   fi
 done
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Checking Oh My Zsh..."
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -41,6 +43,7 @@ ln -s "$DOTFILES/.aerospace.toml" "$HOME/.aerospace.toml"
 
 echo "Done."
 
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+# curl -L https://raw.githubusercontent.com/sbugzu/gruvbox-zsh/master/gruvbox.zsh-theme > ~/.oh-my-zsh/custom/themes/gruvbox.zsh-theme
 
 npm i -g pnpm bun vercel

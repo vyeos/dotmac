@@ -2,22 +2,22 @@ return {
 	"lewis6991/gitsigns.nvim",
 	config = function()
 		require("gitsigns").setup({
-			-- signs = {
-			-- 	add = { text = "▎" }, -- Vertical bar for added lines
-			-- 	change = { text = "▎" }, -- Vertical bar for changed lines
-			-- 	delete = { text = "_" }, -- Underscore for deleted lines
-			-- 	topdelete = { text = "‾" }, -- Overline for deleted lines at top
-			-- 	changedelete = { text = "▎" },
-			-- 	untracked = { text = "┆" }, -- Dashed line for untracked lines
-			-- },
 			signs = {
-				add = { text = "+" },
-				change = { text = "~" },
-				delete = { text = "_" },
-				topdelete = { text = "‾" },
-				changedelete = { text = "~" },
-				untracked = { text = "?" },
+				add = { text = "▎" }, -- Vertical bar for added lines
+				change = { text = "▎" }, -- Vertical bar for changed lines
+				delete = { text = "_" }, -- Underscore for deleted lines
+				topdelete = { text = "‾" }, -- Overline for deleted lines at top
+				changedelete = { text = "▎" },
+				untracked = { text = "┆" }, -- Dashed line for untracked lines
 			},
+			-- signs = {
+			-- 	add = { text = "+" },
+			-- 	change = { text = "~" },
+			-- 	delete = { text = "_" },
+			-- 	topdelete = { text = "‾" },
+			-- 	changedelete = { text = "~" },
+			-- 	untracked = { text = "?" },
+			-- },
 
 			attach_to_untracked = true,
 

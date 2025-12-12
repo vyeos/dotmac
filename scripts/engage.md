@@ -7,3 +7,5 @@ https://gumroad.com/r/ac9da7699c91d069afe51ecc75147ad4/product_files?product_fil
 https://github.com/pqrs-org/Karabiner-Elements/releases/download/v15.7.0/Karabiner-Elements-15.7.0.dmg
 
 https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
+
+https://github.com/alexzielenski/Mousecape/releases/download/1813/Mousecape_1813.zip

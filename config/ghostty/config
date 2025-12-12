@@ -1,69 +1,17 @@
-# --- Font Configuration ---
 font-family = "JetBrainsMono Nerd Font"
 font-size = 14
-# Disables ligatures for a more "retro-industrial" feel (optional)
-# font-feature = "-calt" 
 
 # --- Window Layout ---
 window-padding-x = 16
-# window-padding-y = 16
-# window-height = 40
-# window-width = 120
 
 # Hide the macOS titlebar for a cleaner, immersive view
-# macos-titlebar-style = hidden
+macos-titlebar-style = hidden
+shell-integration-features = no-cursor,no-sudo,no-title
+keybind = ctrl+enter=unbind
+theme = dark:Rose Pine,light:Rose Pine Dawn
 
-# --- Background & Wallpaper ---
-# Deep void black base
-background = #050505 
-
-# Path needs quotes because of the space in "My Drive"
-background-image = "/Users/vyeos/Library/CloudStorage/GoogleDrive-rudranpatel0980@gmail.com/My Drive/Wallpapers/01-bg-space-monkey.png"
+background-image = "/Users/vyeos/Library/CloudStorage/GoogleDrive-rudranpatel0980@gmail.com/My Drive/Wallpapers/wallpapers/ascii.png"
 
 # Image settings
 background-image-opacity = 0.4
 background-image-fit = cover
-
-# --- Cursor (Retro Block) ---
-cursor-style = block
-cursor-style-blink = true
-cursor-color = #e6b450
-
-# --- Sevastopol Theme (Custom Palette) ---
-# Foreground: Off-white/gray for readability
-foreground = #c5c8c6
-selection-background = #373b41
-selection-foreground = #ffffff
-
-# The Palette (Industrial Sci-Fi)
-# Black (Void / Panel)
-palette = 0=#1d1f21
-palette = 8=#969896
-
-# Red (Emergency Light)
-palette = 1=#cc342b
-palette = 9=#cc342b
-
-# Green (CRT Monitor)
-palette = 2=#198844
-palette = 10=#198844
-
-# Yellow (Hazard Warning)
-palette = 3=#fba922
-palette = 11=#fba922
-
-# Blue (Hologram)
-palette = 4=#3971ed
-palette = 12=#3971ed
-
-# Magenta (Neon)
-palette = 5=#a36ac7
-palette = 13=#a36ac7
-
-# Cyan (Data Stream)
-palette = 6=#3971ed
-palette = 14=#3971ed
-
-# White (Glare)
-palette = 7=#c5c8c6
-palette = 15=#ffffff
