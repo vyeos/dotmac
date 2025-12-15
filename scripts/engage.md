@@ -8,4 +8,4 @@ https://github.com/pqrs-org/Karabiner-Elements/releases/download/v15.7.0/Karabin
 
 https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
 
-https://github.com/alexzielenski/Mousecape/releases/download/1813/Mousecape_1813.zip
+https://www.spotify.com/us/download/mac/

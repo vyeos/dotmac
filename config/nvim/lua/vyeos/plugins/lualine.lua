@@ -51,9 +51,9 @@ return {
 				},
 
 				lualine_x = {
-					get_lsp_name,
-					"encoding",
-					"fileformat",
+					-- get_lsp_name,
+					-- "encoding",
+					-- "fileformat",
 					"filetype",
 				},
 				lualine_y = { "progress" },
