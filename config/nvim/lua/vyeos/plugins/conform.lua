@@ -20,11 +20,15 @@ return {
 			format_on_save = {
 				lsp_fallback = true,
 				async = false,
-				timeout_ms = 500,
+				timeout_ms = 2500,
 			},
 		})
+
 		vim.keymap.set("n", "<leader>fm", function()
-			require("conform").format({ bufnr = 0 })
+			require("conform").format({
+				bufnr = 0,
+				timeout_ms = 2500,
+			})
 		end)
 	end,
 }

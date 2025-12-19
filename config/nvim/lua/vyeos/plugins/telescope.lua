@@ -1,13 +1,28 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	tag = "v0.1.9",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	dependencies = { "nvim-lua/plenary.nvim", "jvgrootveld/telescope-zoxide" },
 
 	config = function()
 		local telescope = require("telescope")
 		local builtin = require("telescope.builtin")
 
-		telescope.setup({})
+		telescope.setup({
+			extensions = {
+				zoxide = {
+					prompt_title = "[ Zoxide List ]",
+					mappings = {
+						-- standard mappings
+						-- <CR>	Change current directory to selection	cd <path>
+						-- <C-t>	Change current tab's directory to selection	tcd <path>
+						-- <C-s>	Open selection in a split	split <path>
+						-- <C-v>	Open selection in a vertical split	vsplit <path>
+						-- <C-e>	Open selection in current window	edit <path>
+						-- <C-f>	Open selection in telescope's builtin.find_files	builtin.find_files({ cwd = selection.path })
+					},
+				},
+			},
+		})
 
 		-- vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
 		vim.keymap.set("n", "<leader>fw", builtin.live_grep, { desc = "Live grep" })
@@ -29,5 +44,8 @@ return {
 		--       theme = theme
 		--     }
 		-- end)
+
+		telescope.load_extension("zoxide")
+		vim.keymap.set("n", "<leader>cd", telescope.extensions.zoxide.list)
 	end,
 }

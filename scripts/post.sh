@@ -38,8 +38,8 @@ fi
 echo "Linking .zshrc..."
 rm -rf "$HOME/.zshrc"
 ln -s "$DOTFILES/.zshrc" "$HOME/.zshrc"
-rm -rf "$HOME/.aerospace.toml"
-ln -s "$DOTFILES/.aerospace.toml" "$HOME/.aerospace.toml"
+# rm -rf "$HOME/.aerospace.toml"
+# ln -s "$DOTFILES/.aerospace.toml" "$HOME/.aerospace.toml"
 
 echo "Configuring zoxide..."
 z init zsh --cmd z

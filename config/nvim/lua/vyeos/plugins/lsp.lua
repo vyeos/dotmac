@@ -17,6 +17,7 @@ return {
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 			vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
 			vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
+			vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
 			vim.keymap.set("n", "[d", function()
 				vim.diagnostic.jump({ count = -1, float = true })
 			end, opts)
