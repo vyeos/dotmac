@@ -54,3 +54,6 @@ case ":$PATH:" in
 esac
 
 eval "$(zoxide init zsh)"
+
+# Created by `pipx` on 2025-12-19 16:24:18
+export PATH="$PATH:/Users/vyeos/.local/bin"

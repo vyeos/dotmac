@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+pipx ensurepath
+
 DOTFILES="$HOME/personal/dotmac/config"
 
 mkdir -p "$HOME/.config"
