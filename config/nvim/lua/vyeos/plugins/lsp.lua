@@ -18,14 +18,10 @@ return {
 			vim.keymap.set("n", "<leader>vd", function()
 				vim.diagnostic.open_float({
 					scope = "line",
-					header = "",
-					prefix = " ",
 					border = "single",
 					focusable = false,
-					relative = "editor",
-					width = vim.o.columns,
-					anchor = "SW",
-					row = vim.o.lines - 1,
+					relative = "cursor",
+					row = 1,
 					col = 0,
 				})
 			end, opts)
@@ -56,8 +52,7 @@ return {
 			},
 		})
 
-		-- local servers = { "pyright", "ts_ls", "html", "cssls", "clangd", "gopls", "pylsp", "tailwindcss" }
-		local servers = { "pyright", "ts_ls", "html", "cssls", "gopls", "pylsp", "tailwindcss" }
+		local servers = { "pyright", "ts_ls", "html", "cssls", "gopls", "pylsp", "tailwindcss", "clangd" }
 		for _, server in ipairs(servers) do
 			vim.lsp.config(server, {
 				capabilities = capabilities,
@@ -65,7 +60,6 @@ return {
 			})
 		end
 
-		-- Make sure mason-lspconfig installs the servers
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"lua_ls",
@@ -74,7 +68,6 @@ return {
 				"html",
 				"cssls",
 				"lua_ls",
-				"pylsp",
 				"clangd",
 				"tailwindcss",
 				"rust_analyzer",
