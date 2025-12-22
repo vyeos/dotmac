@@ -23,11 +23,15 @@ source $ZSH/oh-my-zsh.sh
 
 # 6. USER CONFIGURATION & ALIASES
 alias zshconf="nvim ~/.zshrc"
+alias szsh="source ~/.zshrc"
 alias ghconf="nvim ~/.config/ghostty/config"
 alias lg='lazygit'
 alias gor="go run ."
 alias shadcn="pnpm dlx shadcn@latest"
 alias v="nvim"
+alias cd="z"
+alias tmuxa="tmux attach-session -t"
+
 
 # Fixed path handling for Google Drive (Using quotes is safer than escaping spaces)
 alias cdgd="cd '/Users/rudra/Library/CloudStorage/GoogleDrive-rudranpatel0980@gmail.com/My Drive'"

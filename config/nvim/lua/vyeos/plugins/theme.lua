@@ -56,10 +56,18 @@ return {
 				transparent_mode = false,
 			})
 
-			-- The "_G" makes it available everywhere in Neovim
+			local theme_cache = vim.fn.stdpath("data") .. "/last_theme"
+
 			_G.Theme = function(name)
 				vim.cmd.colorscheme(name)
+				local file = io.open(theme_cache, "w")
+				if file then
+					file:write(name)
+					file:close()
+					print("Default theme updated to: " .. name)
+				end
 			end
+
 			vim.api.nvim_create_user_command("Theme", function(args)
 				_G.Theme(args.args)
 			end, {
@@ -67,8 +75,19 @@ return {
 				complete = "color",
 			})
 
-			-- Set default theme
-			vim.cmd.colorscheme("gruvbox")
+			-- Startup Logic
+			local file = io.open(theme_cache, "r")
+			if file then
+				local saved_theme = file:read("*all")
+				file:close()
+				-- Try to load saved theme, fallback to rose-pine if it fails
+				if not pcall(vim.cmd.colorscheme, saved_theme) then
+					vim.cmd.colorscheme("rose-pine")
+				end
+			else
+				-- If no file exists (first run), use rose-pine
+				vim.cmd.colorscheme("rose-pine")
+			end
 		end,
 	},
 	{
@@ -124,14 +143,6 @@ return {
 					h6 = "foam",
 				},
 
-				palette = {
-					-- Override the builtin palette per variant
-					-- moon = {
-					--     base = '#18191a',
-					--     overlay = '#363738',
-					-- },
-				},
-
 				-- NOTE: Highlight groups are extended (merged) by default. Disable this
 				-- per group via `inherit = false`
 				highlight_groups = {
@@ -140,24 +151,7 @@ return {
 					-- VertSplit = { fg = "muted", bg = "muted" },
 					-- Visual = { fg = "base", bg = "text", inherit = false },
 				},
-
-				before_highlight = function(group, highlight, palette)
-					-- Disable all undercurls
-					-- if highlight.undercurl then
-					--     highlight.undercurl = false
-					-- end
-					--
-					-- Change palette colour
-					-- if highlight.fg == palette.pine then
-					--     highlight.fg = palette.foam
-					-- end
-				end,
 			})
-
-			vim.cmd("colorscheme rose-pine")
-			-- vim.cmd("colorscheme rose-pine-main")
-			-- vim.cmd("colorscheme rose-pine-moon")
-			-- vim.cmd("colorscheme rose-pine-dawn")
 		end,
 	},
 	{

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Install Ollama - https://ollama.com/download/Ollama.dmg
+# Ollama - https://ollama.com/download/Ollama.dmg
 
 pipx install poetry
 
