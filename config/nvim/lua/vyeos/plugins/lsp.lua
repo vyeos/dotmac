@@ -6,17 +6,30 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 	},
 	config = function()
-		vim.diagnostic.config({
-			virtual_text = true,
-		})
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 		local on_attach = function(_, bufnr)
 			local opts = { buffer = bufnr, remap = false }
+
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 			vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
-			vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
+
+			vim.keymap.set("n", "<leader>vd", function()
+				vim.diagnostic.open_float({
+					scope = "line",
+					header = "",
+					prefix = " ",
+					border = "single",
+					focusable = false,
+					relative = "editor",
+					width = vim.o.columns,
+					anchor = "SW",
+					row = vim.o.lines - 1,
+					col = 0,
+				})
+			end, opts)
+
 			vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
 			vim.keymap.set("n", "[d", function()
 				vim.diagnostic.jump({ count = -1, float = true })
@@ -66,7 +79,6 @@ return {
 				"tailwindcss",
 				"rust_analyzer",
 			},
-			automatic_enable = true,
 		})
 	end,
 }
