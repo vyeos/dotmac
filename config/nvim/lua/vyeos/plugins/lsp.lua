@@ -23,7 +23,7 @@ return {
 				vim.diagnostic.open_float({
 					scope = "line",
 					border = "single",
-					focusable = false,
+					focusable = true,
 					relative = "cursor",
 					row = 1,
 					col = 0,
