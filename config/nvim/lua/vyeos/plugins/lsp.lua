@@ -8,6 +8,10 @@ return {
 	config = function()
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+		vim.diagnostic.config({
+			virtual_text = true,
+		})
+
 		local on_attach = function(_, bufnr)
 			local opts = { buffer = bufnr, remap = false }
 
@@ -38,6 +42,30 @@ return {
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 		end
 
+		local servers = {
+			"lua_ls",
+			"pyright",
+			"ts_ls",
+			"html",
+			"cssls",
+			"lua_ls",
+			"clangd",
+			"tailwindcss",
+			"rust_analyzer",
+			"gopls",
+		}
+
+		for _, server in ipairs(servers) do
+			vim.lsp.config(server, {
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
+		end
+
+		require("mason-lspconfig").setup({
+			ensure_installed = servers,
+		})
+
 		vim.lsp.config("lua_ls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
@@ -49,28 +77,6 @@ return {
 					},
 					runtime = { version = "LuaJIT" },
 				},
-			},
-		})
-
-		local servers = { "pyright", "ts_ls", "html", "cssls", "gopls", "pylsp", "tailwindcss", "clangd" }
-		for _, server in ipairs(servers) do
-			vim.lsp.config(server, {
-				capabilities = capabilities,
-				on_attach = on_attach,
-			})
-		end
-
-		require("mason-lspconfig").setup({
-			ensure_installed = {
-				"lua_ls",
-				"pyright",
-				"ts_ls",
-				"html",
-				"cssls",
-				"lua_ls",
-				"clangd",
-				"tailwindcss",
-				"rust_analyzer",
 			},
 		})
 	end,
