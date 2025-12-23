@@ -6,6 +6,7 @@ normal = {family = "JetBrainsMono Nerd Font"}
 padding = {x = 16,y = 8}
 decorations = "Buttonless"
 startup_mode = "Maximized"
+option_as_alt = "Both"
 
 [colors.primary]
 foreground = "#e0def4"

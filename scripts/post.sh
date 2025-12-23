@@ -40,15 +40,10 @@ fi
 echo "Linking .zshrc..."
 rm -rf "$HOME/.zshrc"
 ln -s "$DOTFILES/.zshrc" "$HOME/.zshrc"
-# rm -rf "$HOME/.aerospace.toml"
-# ln -s "$DOTFILES/.aerospace.toml" "$HOME/.aerospace.toml"
 
 echo "Configuring zoxide..."
 z init zsh --cmd z
 
 echo "Done."
 
-# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-# curl -L https://raw.githubusercontent.com/sbugzu/gruvbox-zsh/master/gruvbox.zsh-theme > ~/.oh-my-zsh/custom/themes/gruvbox.zsh-theme
-
-npm i -g pnpm bun vercel
+npm i -g pnpm bun vercel yarn
