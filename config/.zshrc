@@ -33,8 +33,7 @@ alias cd="z"
 alias tmuxa="tmux attach-session -t"
 
 
-# Fixed path handling for Google Drive (Using quotes is safer than escaping spaces)
-alias cdgd="cd '/Users/rudra/Library/CloudStorage/GoogleDrive-rudranpatel0980@gmail.com/My Drive'"
+alias cdgd="z '/Users/vyeos/Library/CloudStorage/GoogleDrive-rudranpatel0980@gmail.com/My Drive'"
 
 # 7. POWERLEVEL10K CONFIG
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -62,3 +61,6 @@ eval "$(zoxide init zsh)"
 # Created by `pipx` on 2025-12-19 16:24:18
 export PATH="$PATH:/Users/vyeos/.local/bin"
 export PATH="$PATH:/Users/vyeos/.cargo/bin"
+
+# Added by Antigravity
+export PATH="/Users/vyeos/.antigravity/antigravity/bin:$PATH"

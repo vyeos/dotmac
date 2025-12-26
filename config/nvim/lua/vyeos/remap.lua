@@ -7,7 +7,6 @@ map("n", "<C-n>", vim.cmd.Ex)
 map("n", "<leader>t", "<cmd>tabnew<CR>", { desc = "New Tab" })
 map("n", "<Tab>", "gt", { desc = "Next Tab" })
 map("n", "<S-Tab>", "gT", { desc = "Previous Tab" })
-map("n", "<C-c>", "<cmd> %y+ <CR>", { desc = "Copy whole file" })
 
 M.general = {
 	i = {},
