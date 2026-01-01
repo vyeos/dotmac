@@ -4,7 +4,6 @@ return {
 		priority = 1000,
 		config = function()
 			require("everforest").setup({
-				-- Optional: Add Everforest specific config here
 				background = "hard",
 			})
 		end,

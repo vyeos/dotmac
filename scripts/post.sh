@@ -46,4 +46,4 @@ z init zsh --cmd z
 
 echo "Done."
 
-npm i -g pnpm bun vercel yarn
+npm i -g pnpm bun vercel yarn tailwindcss @tailwindcss/cli

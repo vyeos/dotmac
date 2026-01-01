@@ -50,7 +50,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
-export PNPM_HOME="/Users/rudra/Library/pnpm"
+export PNPM_HOME="/Users/vyeos/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -58,9 +58,8 @@ esac
 
 eval "$(zoxide init zsh)"
 
-# Created by `pipx` on 2025-12-19 16:24:18
 export PATH="$PATH:/Users/vyeos/.local/bin"
-export PATH="$PATH:/Users/vyeos/.cargo/bin"
+source "$HOME/.cargo/env"
 
 # Added by Antigravity
 export PATH="/Users/vyeos/.antigravity/antigravity/bin:$PATH"
