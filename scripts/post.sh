@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-pipx ensurepath
-
 DOTFILES="$HOME/personal/dotmac/config"
 
 mkdir -p "$HOME/.config"
@@ -46,4 +44,4 @@ z init zsh --cmd z
 
 echo "Done."
 
-npm i -g pnpm bun vercel yarn tailwindcss @tailwindcss/cli
+npm i -g pnpm bun vercel yarn
