@@ -4,7 +4,7 @@ DOTFILES="$HOME/personal/dotmac/config"
 
 mkdir -p "$HOME/.config"
 
-configs=(nvim lazygit git ghostty tmux alacritty)
+configs=(nvim lazygit git tmux alacritty)
 
 for config in "${configs[@]}"; do
   rm -rf "$HOME/.config/$config"

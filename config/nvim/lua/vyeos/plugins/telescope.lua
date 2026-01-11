@@ -46,6 +46,6 @@ return {
 		-- end)
 
 		telescope.load_extension("zoxide")
-		vim.keymap.set("n", "<leader>cd", telescope.extensions.zoxide.list)
+		vim.keymap.set("n", "<leader>z", telescope.extensions.zoxide.list)
 	end,
 }
