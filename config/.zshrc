@@ -59,7 +59,7 @@ esac
 eval "$(zoxide init zsh)"
 
 export PATH="$PATH:/Users/vyeos/.local/bin"
-source "$HOME/.cargo/env"
+# source "$HOME/.cargo/env"
 
 # Added by Antigravity
 export PATH="/Users/vyeos/.antigravity/antigravity/bin:$PATH"
