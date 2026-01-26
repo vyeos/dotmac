@@ -27,7 +27,9 @@ alias szsh="source ~/.zshrc"
 alias ghconf="nvim ~/.config/ghostty/config"
 alias lg='lazygit'
 alias gor="go run ."
-alias shadcn="pnpm dlx shadcn@latest"
+alias nshadcn="npx shadcn@latest"
+alias pshadcn="pnpm dlx shadcn@latest"
+alias bshadcn="bunx shadcn@latest"
 alias v="nvim"
 alias cd="z"
 alias tmuxa="tmux attach-session -t"
@@ -63,3 +65,7 @@ export PATH="$PATH:/Users/vyeos/.local/bin"
 
 # Added by Antigravity
 export PATH="/Users/vyeos/.antigravity/antigravity/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
