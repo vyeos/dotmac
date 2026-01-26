@@ -32,7 +32,9 @@ alias pshadcn="pnpm dlx shadcn@latest"
 alias bshadcn="bunx shadcn@latest"
 alias v="nvim"
 alias cd="z"
-alias tmuxa="tmux attach-session -t"
+alias tm="tmux"
+alias tma="tmux attach-session"
+alias tmat="tmux attach-session -t"
 
 
 alias cdgd="z '/Users/vyeos/Library/CloudStorage/GoogleDrive-rudranpatel0980@gmail.com/My Drive'"

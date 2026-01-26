@@ -26,7 +26,7 @@ return {
 				"prettier",
 				"biome",
 				"stylua",
-				"black",
+				-- "black",
 			},
 			-- Auto-update tools on startup?
 			auto_update = true,

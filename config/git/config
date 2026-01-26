@@ -33,5 +33,5 @@
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [user]
-	name = Vyeos
+	name = vyeos
 	email = rudranpatel0980@gmail.com
