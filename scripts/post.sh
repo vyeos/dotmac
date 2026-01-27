@@ -38,6 +38,8 @@ echo "Linking .zshrc..."
 rm -rf "$HOME/.zshrc"
 ln -s "$DOTFILES/.zshrc" "$HOME/.zshrc"
 
+touch $HOME/.hushlogin
+
 echo "Configuring zoxide..."
 z init zsh --cmd z
 

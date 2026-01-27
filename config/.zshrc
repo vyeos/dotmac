@@ -35,8 +35,6 @@ alias cd="z"
 alias tm="tmux"
 alias tma="tmux attach-session"
 alias tmat="tmux attach-session -t"
-
-
 alias cdgd="z '/Users/vyeos/Library/CloudStorage/GoogleDrive-rudranpatel0980@gmail.com/My Drive'"
 
 # 7. POWERLEVEL10K CONFIG
