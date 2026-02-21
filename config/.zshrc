@@ -36,6 +36,7 @@ alias tm="tmux"
 alias tma="tmux attach-session"
 alias tmat="tmux attach-session -t"
 alias cdgd="z '/Users/vyeos/Library/CloudStorage/GoogleDrive-rudranpatel0980@gmail.com/My Drive'"
+alias oc="opencode"
 
 # 7. POWERLEVEL10K CONFIG
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -61,7 +62,7 @@ esac
 eval "$(zoxide init zsh)"
 
 export PATH="$PATH:/Users/vyeos/.local/bin"
-# source "$HOME/.cargo/env"
+source "$HOME/.cargo/env"
 
 # Added by Antigravity
 export PATH="/Users/vyeos/.antigravity/antigravity/bin:$PATH"
@@ -69,3 +70,9 @@ export PATH="/Users/vyeos/.antigravity/antigravity/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="/Applications/love.app/Contents/MacOS:$PATH"
+export PATH="/opt/homebrew/opt/jpeg/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/vyeos/.antigravity/antigravity/bin:$PATH"
