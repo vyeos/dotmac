@@ -2,7 +2,7 @@
 echo >> /Users/vyeos/.zprofile
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/vyeos/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
-brew install git gh nvim luarocks lua lazygit ripgrep fzf tmux zoxide openjdk node
+brew install git gh nvim luarocks lua lazygit ripgrep fzf tmux zoxide
 git config --global user.name "vyeos"
 git config --global user.email "rudranpatel0980@gmail.com"
-brew install --cask raycast google-drive alacritty font-jetbrains-mono-nerd-font
+brew install --cask google-drive font-jetbrains-mono-nerd-font

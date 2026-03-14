@@ -45,6 +45,6 @@ z init zsh --cmd z
 
 echo "Done."
 
-npm i -g pnpm bun vercel yarn
+# npm i -g pnpm bun vercel yarn
 
-sudo ln -sfn $(brew --prefix openjdk)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+# sudo ln -sfn $(brew --prefix openjdk)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk

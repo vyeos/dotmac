@@ -15,6 +15,7 @@ return {
 				"html",
 				"css",
 				"json",
+				"go",
 			},
 
 			sync_install = false,

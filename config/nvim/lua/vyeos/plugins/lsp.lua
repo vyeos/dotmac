@@ -53,7 +53,7 @@ return {
 			"clangd",
 			"tailwindcss",
 			-- "rust_analyzer",
-			-- "gopls",
+			"gopls",
 		}
 
 		for _, server in ipairs(servers) do
