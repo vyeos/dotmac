@@ -1,17 +1,29 @@
 font-family = "JetBrainsMono Nerd Font"
-font-size = 14
+font-size = 16
 
-# --- Window Layout ---
 window-padding-x = 16
 
-# Hide the macOS titlebar for a cleaner, immersive view
-macos-titlebar-style = hidden
-shell-integration-features = no-cursor,no-sudo,no-title
 keybind = ctrl+enter=unbind
 theme = dark:Rose Pine,light:Rose Pine Dawn
+cursor-style = block
+cursor-style-blink = false
+mouse-hide-while-typing
 
-background-image = "/Users/vyeos/Library/CloudStorage/GoogleDrive-rudranpatel0980@gmail.com/My Drive/Wallpapers/wallpapers/ascii.png"
+notify-on-command-finish = unfocused
+scrollbar = never
 
-# Image settings
-background-image-opacity = 0.4
-background-image-fit = cover
+confirm-close-surface = false
+shell-integration-features = no-cursor
+
+macos-window-buttons = hidden
+macos-titlebar-proxy-icon = visible
+
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+l=goto_split:right
+
+keybind = super+ctrl+k=resize_split:up,50
+keybind = super+ctrl+j=resize_split:down,50
+keybind = super+ctrl+h=resize_split:left,50
+keybind = super+ctrl+l=resize_split:right,50

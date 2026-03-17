@@ -14,7 +14,7 @@
   "show_completion_documentation": false,
   "autosave": {
     "after_delay": {
-      "milliseconds": 100,
+      "milliseconds": 1000,
     },
   },
   "vertical_scroll_margin": 8.0,
@@ -40,6 +40,7 @@
     "light": "Rosé Pine Dawn",
     "dark": "Rosé Pine",
   },
+  "lsp_document_colors": "background",
   "colorize_brackets": true,
   "title_bar": {
     "show_user_picture": true,
