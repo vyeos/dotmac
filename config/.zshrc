@@ -64,7 +64,7 @@ esac
 eval "$(zoxide init zsh)"
 
 export PATH="$PATH:/Users/vyeos/.local/bin"
-# source "$HOME/.cargo/env"
+source "$HOME/.cargo/env"
 
 export PATH="$(go env GOPATH)/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
