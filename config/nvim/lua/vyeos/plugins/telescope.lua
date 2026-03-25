@@ -8,6 +8,11 @@ return {
 		local builtin = require("telescope.builtin")
 
 		telescope.setup({
+			defaults = {
+				file_ignore_patterns = {
+					"node_modules",
+				},
+			},
 			extensions = {
 				zoxide = {
 					prompt_title = "[ Zoxide List ]",
