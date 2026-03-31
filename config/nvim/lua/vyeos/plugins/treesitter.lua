@@ -5,17 +5,20 @@ return {
 		local config = require("nvim-treesitter.config")
 
 		config.setup({
+			install_dir = vim.fn.stdpath("data") .. "/site",
 			ensure_installed = {
-				"c",
 				"lua",
 				"vim",
 				"vimdoc",
-				"javascript",
-				"typescript",
 				"html",
 				"css",
+				"javascript",
+				"typescript",
 				"json",
+				"c",
 				"go",
+				"zig",
+				"rust",
 			},
 
 			sync_install = false,
@@ -24,7 +27,6 @@ return {
 			modules = {},
 
 			highlight = { enable = true },
-
 			indent = { enable = true },
 		})
 	end,
