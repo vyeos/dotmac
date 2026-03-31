@@ -4,7 +4,8 @@ font-size = 16
 window-padding-x = 16
 
 keybind = ctrl+enter=unbind
-theme = dark:Rose Pine,light:Rose Pine Dawn
+theme = dark:Rose Pine Moon,light:Rose Pine Dawn
+# theme = dark:TokyoNight Storm,light:TokyoNight Day
 cursor-style = block
 cursor-style-blink = false
 mouse-hide-while-typing

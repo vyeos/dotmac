@@ -73,8 +73,5 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# export PATH="/Applications/love.app/Contents/MacOS:$PATH"
-# export PATH="/opt/homebrew/opt/jpeg/bin:$PATH"
-
 # opencode
 export PATH=/Users/vyeos/.opencode/bin:$PATH
