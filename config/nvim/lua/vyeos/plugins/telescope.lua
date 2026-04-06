@@ -6,24 +6,18 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local builtin = require("telescope.builtin")
+		local actions = require("telescope.actions")
 
 		telescope.setup({
 			defaults = {
 				file_ignore_patterns = {
 					"node_modules",
 				},
-			},
-			extensions = {
-				zoxide = {
-					prompt_title = "[ Zoxide List ]",
-					mappings = {
-						-- standard mappings
-						-- <CR>	Change current directory to selection	cd <path>
-						-- <C-t>	Change current tab's directory to selection	tcd <path>
-						-- <C-s>	Open selection in a split	split <path>
-						-- <C-v>	Open selection in a vertical split	vsplit <path>
-						-- <C-e>	Open selection in current window	edit <path>
-						-- <C-f>	Open selection in telescope's builtin.find_files	builtin.find_files({ cwd = selection.path })
+				mappings = {
+					i = {
+						["<C-s>"] = actions.select_horizontal,
+						["<Tab>"] = actions.move_selection_next,
+						["<S-Tab>"] = actions.move_selection_previous,
 					},
 				},
 			},
