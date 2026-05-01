@@ -1,0 +1,47 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle",
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-H": ["workspace::SwapPaneInDirection", "Left"],
+      "ctrl-J": ["workspace::SwapPaneInDirection", "Down"],
+      "ctrl-L": ["workspace::SwapPaneInDirection", "Right"],
+      "ctrl-K": ["workspace::SwapPaneInDirection", "Up"],
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-;": "terminal_panel::Toggle",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "v d": "editor::Hover",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "g h": "editor::Hover",
+    },
+  },
+]
