@@ -5,6 +5,8 @@
 // custom settings, run `zed: open default settings` from the
 {
   "cli_default_open_behavior": "new_window",
+  "cursor_blink": false,
+  "relative_line_numbers": "enabled",
   "project_panel": {
     "dock": "left",
   },

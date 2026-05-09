@@ -32,7 +32,6 @@ alias nshadcn="npx shadcn@latest"
 alias pshadcn="pnpm dlx shadcn@latest"
 alias bshadcn="bunx shadcn@latest"
 alias v="nvim"
-alias cd="z"
 alias tm="tmux"
 alias tma="tmux attach-session"
 alias tmat="tmux attach-session -t"
@@ -75,3 +74,8 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # opencode
 export PATH=/Users/vyeos/.opencode/bin:$PATH
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/vyeos/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions

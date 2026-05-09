@@ -9,35 +9,31 @@
   {
     "context": "vim_mode == normal",
     "bindings": {
-      // "shift shift": "file_finder::Toggle",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-l": "workspace::ActivatePaneRight",
+      "space q": "diagnostics::Deploy",
+      "space e": "vim::ToggleProjectPanelFocus",
+      "space s": "outline::Toggle",
+      "v g d": "editor::GoToDefinitionSplit",
     },
   },
   {
     "context": "Editor && vim_mode == insert",
-    "bindings": {
-      // "j k": "vim::NormalBefore"
-    },
+    "bindings": {},
   },
   {
-    "context": "Workspace",
+    "context": "Editor && vim_mode == visual",
     "bindings": {
-      "ctrl-;": "terminal_panel::Toggle",
+      "shift-k": "editor::MoveLineUp",
+      "shift-j": "editor::MoveLineDown",
     },
   },
   {
     "context": "VimControl && !menu",
     "bindings": {
       "v d": "editor::Hover",
-    },
-  },
-  {
-    "context": "VimControl && !menu",
-    "unbind": {
-      "g h": "editor::Hover",
     },
   },
   {
@@ -80,6 +76,67 @@
     "context": "Editor",
     "unbind": {
       "ctrl-l": "editor::ScrollCursorCenter",
+    },
+  },
+  {
+    "context": "BufferSearchBar",
+    "unbind": {
+      "alt-cmd-l": "search::ToggleSelection",
+    },
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "alt-cmd-l": "search::ToggleSelection",
+    },
+    "bindings": {
+      "ctrl-cmd-l": "pane::ActivateNextItem",
+      "ctrl-cmd-h": "pane::ActivatePreviousItem",
+    },
+  },
+  {
+    "context": "Editor && mode == full",
+    "unbind": {
+      "alt-cmd-l": [
+        "buffer_search::Deploy",
+        {
+          "selection_search_enabled": true,
+        },
+      ],
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "unbind": {
+      "alt-cmd-l": "agent::OpenRulesLibrary",
+    },
+  },
+  {
+    "unbind": {
+      "alt-cmd-h": "zed::HideOthers",
+    },
+  },
+  {
+    "unbind": {
+      "ctrl-cmd-l": "lsp_tool::ToggleMenu",
+    },
+  },
+  {
+    "context": "vim_mode == helix_select",
+    "unbind": {
+      "shift-j": "vim::JoinLines",
+    },
+  },
+  {
+    "context": "(vim_mode == normal || vim_mode == helix_normal) && !menu",
+    "unbind": {
+      "shift-j": "vim::JoinLines",
+    },
+  },
+  {
+    "context": "vim_mode == visual",
+    "unbind": {
+      "shift-j": "vim::JoinLines",
     },
   },
 ]
