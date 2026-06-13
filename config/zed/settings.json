@@ -4,6 +4,7 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run `zed: open default settings` from the
 {
+  "diff_view_style": "split",
   "cli_default_open_behavior": "new_window",
   "cursor_blink": false,
   "relative_line_numbers": "enabled",

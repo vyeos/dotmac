@@ -3,7 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # 2. THEME CONFIGURATION
 # ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell" # set by `omz`
 
 # 3. ZSH SETTINGS
 # Display red dots while waiting for completion
@@ -37,7 +37,11 @@ alias tma="tmux attach-session"
 alias tmat="tmux attach-session -t"
 alias cdgd="z '/Users/vyeos/Library/CloudStorage/GoogleDrive-rudranpatel0980@gmail.com/My Drive'"
 alias oc="opencode"
-alias zd="zed"
+alias cc="claude"
+alias python="python3.11"
+alias pip="pip3.11"
+alias fb="fabric"
+alias rich="uv run ytrich"
 
 # 7. POWERLEVEL10K CONFIG
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -66,7 +70,6 @@ export PATH="$PATH:/Users/vyeos/.local/bin"
 source "$HOME/.cargo/env"
 
 export PATH="$(go env GOPATH)/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -79,3 +82,9 @@ fpath=(/Users/vyeos/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+export ANDROID_HOME=$HOME/Library/Android/sdk 
+export PATH=$PATH:$ANDROID_HOME/emulator 
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"

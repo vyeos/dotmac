@@ -139,4 +139,16 @@
       "shift-j": "vim::JoinLines",
     },
   },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
+    "unbind": {
+      "space /": "pane::DeploySearch"
+    }
+  },
+  {
+    "context": "!Editor && !Terminal",
+    "unbind": {
+      "space /": "pane::DeploySearch"
+    }
+  }
 ]
