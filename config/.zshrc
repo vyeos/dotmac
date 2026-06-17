@@ -41,7 +41,9 @@ alias cc="claude"
 alias python="python3.11"
 alias pip="pip3.11"
 alias fb="fabric"
-alias rich="uv run ytrich"
+alias rich="cd ~/personal/yt-rich; uv run ytrich"
+alias ls="eza -a --oneline --long --color=always --no-user --no-permissions --icons --group-directories-first"
+alias tree="eza -a --oneline --long --color=always --no-user --no-permissions --icons --tree --group-directories-first"
 
 # 7. POWERLEVEL10K CONFIG
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
