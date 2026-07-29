@@ -4,8 +4,8 @@ font-size = 16
 window-padding-x = 16
 
 keybind = ctrl+enter=unbind
- theme = dark:Rose Pine Moon,light:Rose Pine Dawn
-# theme = dark:TokyoNight Storm,light:TokyoNight Day
+# theme = dark:Rose Pine Moon,light:Rose Pine Dawn
+ theme = dark:TokyoNight Moon,light:TokyoNight Day
 # theme = dark:Catppuccin Macchiato,light:Catppuccin Latte 
 
 cursor-style = block
